@@ -52,9 +52,9 @@ void rotate(int steps, float speed){
  
   int dir; //initialize dir (used for driver "dir" pin) 
 
-  if (steps > 0){  // if positive, get 
+  if (steps > 0){  // if positive, set dir pin to high logic (CW)
     dir = HIGH;
-  }else{
+  }else{          //otherwise, set dir pin to low logic (CCW)
     dir = LOW;
   }
  
