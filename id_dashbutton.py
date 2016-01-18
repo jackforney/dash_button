@@ -8,7 +8,7 @@ def arp_display(pkt):
     if pkt[ARP].psrc == '0.0.0.0': # ARP Probe
       if pkt[ARP].hwsrc == 'a0:02:dc:0c:43:d3':  #detect button-specific MAC Address
         print 'Pressed ON Button'
-      #if pkt[ARP].hwsrc == '<another MAC Address>':
+      #elif pkt[ARP].hwsrc == '<another MAC Address>':
         #print 'Press <another button>'
       else:
         print "ARP Probe from: " + pkt[ARP].hwsrc
